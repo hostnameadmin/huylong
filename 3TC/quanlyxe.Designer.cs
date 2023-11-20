@@ -30,10 +30,10 @@
         {
             groupBox1 = new GroupBox();
             button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
-            textBox4 = new TextBox();
-            textBox1 = new TextBox();
+            dtangayvao = new DateTimePicker();
+            cbhangxe = new ComboBox();
+            txtbiensoxe = new TextBox();
+            txtkh = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -41,14 +41,14 @@
             groupBox2 = new GroupBox();
             TimXe = new TextBox();
             button3 = new Button();
-            button2 = new Button();
-            listView1 = new ListView();
+            lstbaixe = new ListView();
             CSoTT = new ColumnHeader();
             CTenKhach = new ColumnHeader();
             CSoXe = new ColumnHeader();
             CHangXe = new ColumnHeader();
             CNgayVao = new ColumnHeader();
             CNgayRa = new ColumnHeader();
+            btnexit = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -56,10 +56,10 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(dtangayvao);
+            groupBox1.Controls.Add(cbhangxe);
+            groupBox1.Controls.Add(txtbiensoxe);
+            groupBox1.Controls.Add(txtkh);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
@@ -74,44 +74,45 @@
             // 
             // button1
             // 
-            button1.Location = new Point(167, 291);
+            button1.Location = new Point(146, 293);
             button1.Name = "button1";
             button1.Size = new Size(121, 59);
             button1.TabIndex = 10;
             button1.Text = "NHẬP XE";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // dateTimePicker1
+            // dtangayvao
             // 
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(146, 230);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(228, 31);
-            dateTimePicker1.TabIndex = 9;
+            dtangayvao.CustomFormat = "dd/MM/yyyy";
+            dtangayvao.Format = DateTimePickerFormat.Custom;
+            dtangayvao.Location = new Point(146, 230);
+            dtangayvao.Name = "dtangayvao";
+            dtangayvao.Size = new Size(228, 31);
+            dtangayvao.TabIndex = 9;
             // 
-            // comboBox1
+            // cbhangxe
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "VinFast", "Volkswagen", "Toyota", "Mercedes-Benz", "BMW", "Honda", "Hyundai", "Stellantis", "Ford", "SAIC", "General Motors", "Suzuki", "Fiat" });
-            comboBox1.Location = new Point(146, 175);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(228, 33);
-            comboBox1.TabIndex = 8;
+            cbhangxe.FormattingEnabled = true;
+            cbhangxe.Items.AddRange(new object[] { "VinFast", "Volkswagen", "Toyota", "Mercedes-Benz", "BMW", "Honda", "Hyundai", "Stellantis", "Ford", "SAIC", "General Motors", "Suzuki", "Fiat" });
+            cbhangxe.Location = new Point(146, 175);
+            cbhangxe.Name = "cbhangxe";
+            cbhangxe.Size = new Size(228, 33);
+            cbhangxe.TabIndex = 8;
             // 
-            // textBox4
+            // txtbiensoxe
             // 
-            textBox4.Location = new Point(146, 121);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(228, 31);
-            textBox4.TabIndex = 7;
+            txtbiensoxe.Location = new Point(146, 121);
+            txtbiensoxe.Name = "txtbiensoxe";
+            txtbiensoxe.Size = new Size(228, 31);
+            txtbiensoxe.TabIndex = 7;
             // 
-            // textBox1
+            // txtkh
             // 
-            textBox1.Location = new Point(146, 69);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(228, 31);
-            textBox1.TabIndex = 4;
+            txtkh.Location = new Point(146, 69);
+            txtkh.Name = "txtkh";
+            txtkh.Size = new Size(228, 31);
+            txtkh.TabIndex = 4;
             // 
             // label4
             // 
@@ -153,12 +154,11 @@
             // 
             groupBox2.Controls.Add(TimXe);
             groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(listView1);
+            groupBox2.Controls.Add(lstbaixe);
             groupBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.Location = new Point(508, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(457, 562);
+            groupBox2.Size = new Size(599, 750);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "XUẤT XE";
@@ -166,7 +166,7 @@
             // TimXe
             // 
             TimXe.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TimXe.Location = new Point(51, 44);
+            TimXe.Location = new Point(27, 57);
             TimXe.Name = "TimXe";
             TimXe.Size = new Size(199, 31);
             TimXe.TabIndex = 11;
@@ -176,31 +176,27 @@
             // 
             // button3
             // 
-            button3.Location = new Point(100, 81);
+            button3.Location = new Point(264, 51);
             button3.Name = "button3";
             button3.Size = new Size(94, 37);
             button3.TabIndex = 2;
             button3.Text = "TÌM XE";
             button3.UseVisualStyleBackColor = true;
+            button3.TextChanged += button3_TextChanged;
+            button3.Click += button3_Click;
             // 
-            // button2
+            // lstbaixe
             // 
-            button2.Location = new Point(307, 30);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 88);
-            button2.TabIndex = 1;
-            button2.Text = "XUẤT XE";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { CSoTT, CTenKhach, CSoXe, CHangXe, CNgayVao, CNgayRa });
-            listView1.Location = new Point(9, 127);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(442, 429);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            lstbaixe.Columns.AddRange(new ColumnHeader[] { CSoTT, CTenKhach, CSoXe, CHangXe, CNgayVao, CNgayRa });
+            lstbaixe.FullRowSelect = true;
+            lstbaixe.GridLines = true;
+            lstbaixe.Location = new Point(9, 127);
+            lstbaixe.Name = "lstbaixe";
+            lstbaixe.Size = new Size(584, 616);
+            lstbaixe.TabIndex = 0;
+            lstbaixe.UseCompatibleStateImageBehavior = false;
+            lstbaixe.View = View.Details;
+            lstbaixe.SelectedIndexChanged += lstbaixe_SelectedIndexChanged;
             // 
             // CSoTT
             // 
@@ -209,33 +205,50 @@
             // CTenKhach
             // 
             CTenKhach.Text = "Tên Khách";
+            CTenKhach.Width = 105;
             // 
             // CSoXe
             // 
             CSoXe.Text = "Số Xe";
+            CSoXe.Width = 75;
             // 
             // CHangXe
             // 
             CHangXe.Text = "Hãng Xe";
+            CHangXe.Width = 90;
             // 
             // CNgayVao
             // 
             CNgayVao.Text = "Ngày Vào";
+            CNgayVao.Width = 100;
             // 
             // CNgayRa
             // 
             CNgayRa.Text = "Ngày Ra";
+            CNgayRa.Width = 95;
+            // 
+            // btnexit
+            // 
+            btnexit.Location = new Point(1013, 761);
+            btnexit.Name = "btnexit";
+            btnexit.Size = new Size(94, 29);
+            btnexit.TabIndex = 11;
+            btnexit.Text = "Exit";
+            btnexit.UseVisualStyleBackColor = true;
+            btnexit.Click += btnexit_Click;
             // 
             // quanlyxe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(992, 586);
+            ClientSize = new Size(1141, 794);
+            Controls.Add(btnexit);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "quanlyxe";
             Text = "QUẢN LÝ XE";
             FormClosing += CLose;
+            Load += quanlyxe_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -247,24 +260,24 @@
 
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox4;
-        private TextBox textBox1;
+        private ComboBox cbhangxe;
+        private TextBox txtbiensoxe;
+        private TextBox txtkh;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private ListView listView1;
+        private ListView lstbaixe;
         private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtangayvao;
         private TextBox TimXe;
         private Button button3;
-        private Button button2;
         private ColumnHeader CSoTT;
         private ColumnHeader CTenKhach;
         private ColumnHeader CSoXe;
         private ColumnHeader CHangXe;
         private ColumnHeader CNgayVao;
         private ColumnHeader CNgayRa;
+        private Button btnexit;
     }
 }

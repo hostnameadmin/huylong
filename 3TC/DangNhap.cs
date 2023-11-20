@@ -52,7 +52,7 @@ namespace _3TC
             }
             else
             {
-                MessageBox.Show("Sai Mật Khẩu !");
+                MessageBox.Show("ERROR!");
             }
 
         }
