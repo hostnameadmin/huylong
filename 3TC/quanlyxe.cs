@@ -121,7 +121,7 @@ namespace _3TC
         private void btnexit_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            
             var frm = new DangNhap();
             frm.ShowDialog();
         }
@@ -151,17 +151,10 @@ namespace _3TC
             baixe.SubItems.Add("19/11/2023");
 
             lstbaixe.Items.Add(baixe);
-
-
-        }
-        private void sott()
-        {
-            int index = 1;
-            foreach (ListViewItem item in lstbaixe.Items)
-            {
-                item.Text = index.ToString();
-                index++;
-            }
+            lstbaixe.FullRowSelect = true;
+            lstbaixe.View = View.Details;
+        
+        
         }
         private void lstbaixe_SelectedIndexChanged(object sender, EventArgs e)
         {

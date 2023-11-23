@@ -29,26 +29,26 @@ namespace _3TC
 
             if (lbltaikhoan.Text == "huylong" && lblmatkhau.Text == "14122004")
             {
-                this.Hide();
+             
                 var frm = new quanlyxe();
                 frm.ShowDialog();
-
+                this.Close();
             }
             else
                if (lbltaikhoan.Text == "maitrong" && lblmatkhau.Text == "20052004")
             {
-                this.Hide();
+             
                 var frm = new quanlyxe();
                 frm.ShowDialog();
-
+                this.Close();
             }
             else
                 if (lbltaikhoan.Text == "tranvi" && lblmatkhau.Text == "17052004")
             {
-                this.Hide();
+       
                 var frm = new quanlyxe();
                 frm.ShowDialog();
-
+                this.Close();
             }
             else
             {
