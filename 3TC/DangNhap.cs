@@ -29,7 +29,7 @@ namespace _3TC
 
             if (lbltaikhoan.Text == "huylong" && lblmatkhau.Text == "14122004")
             {
-             
+
                 var frm = new quanlyxe();
                 frm.ShowDialog();
                 this.Close();
@@ -37,7 +37,7 @@ namespace _3TC
             else
                if (lbltaikhoan.Text == "maitrong" && lblmatkhau.Text == "20052004")
             {
-             
+
                 var frm = new quanlyxe();
                 frm.ShowDialog();
                 this.Close();
@@ -45,7 +45,7 @@ namespace _3TC
             else
                 if (lbltaikhoan.Text == "tranvi" && lblmatkhau.Text == "17052004")
             {
-       
+
                 var frm = new quanlyxe();
                 frm.ShowDialog();
                 this.Close();
@@ -60,6 +60,20 @@ namespace _3TC
         private void Dangnhao(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void DangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+            this.KeyDown += DangNhap_KeyDown;
         }
     }
 }

@@ -28,67 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbltaikhoan = new System.Windows.Forms.TextBox();
-            lblmatkhau = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
+            lbltaikhoan = new TextBox();
+            lblmatkhau = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            btndangnhap = new Button();
             SuspendLayout();
             // 
             // lbltaikhoan
             // 
-            lbltaikhoan.Location = new System.Drawing.Point(155, 108);
+            lbltaikhoan.Location = new Point(155, 108);
             lbltaikhoan.Name = "lbltaikhoan";
-            lbltaikhoan.Size = new System.Drawing.Size(191, 27);
+            lbltaikhoan.Size = new Size(191, 27);
             lbltaikhoan.TabIndex = 0;
-            lbltaikhoan.TextChanged += this.textBox1_TextChanged;
+            lbltaikhoan.TextChanged += textBox1_TextChanged;
             // 
             // lblmatkhau
             // 
-            lblmatkhau.Location = new System.Drawing.Point(155, 167);
+            lblmatkhau.Location = new Point(155, 167);
             lblmatkhau.Name = "lblmatkhau";
             lblmatkhau.PasswordChar = '*';
-            lblmatkhau.Size = new System.Drawing.Size(191, 27);
+            lblmatkhau.Size = new Size(191, 27);
             lblmatkhau.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(35, 110);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(35, 110);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(101, 25);
+            label1.Size = new Size(101, 25);
             label1.TabIndex = 2;
             label1.Text = "Tài Khoản:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(36, 169);
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(36, 169);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(100, 25);
+            label2.Size = new Size(100, 25);
             label2.TabIndex = 3;
             label2.Text = "Mật Khẩu:";
             // 
-            // button1
+            // btndangnhap
             // 
-            button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button1.Location = new System.Drawing.Point(100, 226);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(191, 54);
-            button1.TabIndex = 4;
-            button1.Text = "ĐĂNG NHẬP";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += this.button1_Click;
+            btndangnhap.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btndangnhap.Location = new Point(100, 226);
+            btndangnhap.Name = "btndangnhap";
+            btndangnhap.Size = new Size(191, 54);
+            btndangnhap.TabIndex = 4;
+            btndangnhap.Text = "ĐĂNG NHẬP";
+            btndangnhap.UseVisualStyleBackColor = true;
+            btndangnhap.Click += button1_Click;
             // 
             // DangNhap
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.Beige;
-            ClientSize = new System.Drawing.Size(394, 481);
-            Controls.Add(button1);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Beige;
+            ClientSize = new Size(394, 481);
+            Controls.Add(btndangnhap);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblmatkhau);
@@ -96,6 +96,8 @@
             Name = "DangNhap";
             Text = "DangNhap";
             FormClosing += Dangnhao;
+            Load += DangNhap_Load;
+            KeyDown += DangNhap_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,6 +108,6 @@
         private TextBox lblmatkhau;
         private Label label1;
         private Label label2;
-        private Button button1;
+        private Button btndangnhap;
     }
 }
