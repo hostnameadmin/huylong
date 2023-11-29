@@ -25,7 +25,7 @@ namespace _3TC
 
         private void Timxe(object sender, EventArgs e)
         {
-            TimXe.Text = "";
+            
         }
 
         private void CLose(object sender, FormClosingEventArgs e)
@@ -72,7 +72,6 @@ namespace _3TC
         private void button3_TextChanged(object sender, EventArgs e)
         {
 
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,45 +82,12 @@ namespace _3TC
         private void button2_Click(object sender, EventArgs e)
         {
 
-
-
-
-            //ListViewItem XE;
-
-            ////định nghĩa các subnet và thuộc tính 
-            //ListViewItem.ListViewSubItem Khachhang, bienso, hangxe, ngayvao;
-
-            //XE = new ListViewItem();
-
-            //Khachhang = new ListViewItem.ListViewSubItem();
-            //Khachhang.Text = "Huy Long";
-
-            //bienso = new ListViewItem.ListViewSubItem();
-            //bienso.Text = "00000";
-
-            //hangxe = new ListViewItem.ListViewSubItem();
-            //hangxe.Text = "BNW";
-
-            //ngayvao = new ListViewItem.ListViewSubItem();
-            //ngayvao.Text = "19/11/2023";
-
-            //XE.SubItems.Add(Khachhang);
-            //XE.SubItems.Add(bienso);
-            //XE.SubItems.Add(hangxe);
-            //XE.SubItems.Add(ngayvao);
-            //lstbaixe.Items.Add(XE);
-
-
-            //ListViewItem defaultItem = new ListViewItem("Mục mặc định");
-
-            //// Thêm mục mặc định vào ListView
-            //lstbaixe.Items.Add(defaultItem);
         }
 
         private void btnexit_Click(object sender, EventArgs e)
         {
 
-
+            this.Hide();
             var frm = new DangNhap();
             frm.ShowDialog();
         }
@@ -129,21 +95,10 @@ namespace _3TC
         private void quanlyxe_Load(object sender, EventArgs e)
         {
 
-
-
         }
         private void lstbaixe_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
-        }
-
-        private void btn_TaoHoaDon_Click(object sender, EventArgs e)
-        {
-            var frm = new HoaDon();
-            frm.ShowDialog();
-
-            
-         }
         }
     }
+}

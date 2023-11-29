@@ -49,7 +49,6 @@
             CNgayVao = new ColumnHeader();
             CNgayRa = new ColumnHeader();
             btnexit = new Button();
-            btn_TaoHoaDon = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -75,7 +74,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(172, 365);
+            button1.Location = new Point(146, 293);
             button1.Name = "button1";
             button1.Size = new Size(121, 59);
             button1.TabIndex = 10;
@@ -85,7 +84,7 @@
             // 
             // dtangayvao
             // 
-            dtangayvao.CustomFormat = "dd/MM/yyyy";
+            dtangayvao.CustomFormat = "HH:mm dd/MM/yyyy";
             dtangayvao.Format = DateTimePickerFormat.Custom;
             dtangayvao.Location = new Point(146, 230);
             dtangayvao.Name = "dtangayvao";
@@ -159,7 +158,7 @@
             groupBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.Location = new Point(508, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(599, 750);
+            groupBox2.Size = new Size(595, 527);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "XUẤT XE";
@@ -193,7 +192,7 @@
             lstbaixe.GridLines = true;
             lstbaixe.Location = new Point(9, 127);
             lstbaixe.Name = "lstbaixe";
-            lstbaixe.Size = new Size(584, 616);
+            lstbaixe.Size = new Size(580, 394);
             lstbaixe.TabIndex = 0;
             lstbaixe.UseCompatibleStateImageBehavior = false;
             lstbaixe.View = View.Details;
@@ -230,7 +229,7 @@
             // 
             // btnexit
             // 
-            btnexit.Location = new Point(1013, 761);
+            btnexit.Location = new Point(996, 545);
             btnexit.Name = "btnexit";
             btnexit.Size = new Size(94, 29);
             btnexit.TabIndex = 11;
@@ -238,22 +237,11 @@
             btnexit.UseVisualStyleBackColor = true;
             btnexit.Click += btnexit_Click;
             // 
-            // btn_TaoHoaDon
-            // 
-            btn_TaoHoaDon.Location = new Point(171, 594);
-            btn_TaoHoaDon.Name = "btn_TaoHoaDon";
-            btn_TaoHoaDon.Size = new Size(183, 75);
-            btn_TaoHoaDon.TabIndex = 12;
-            btn_TaoHoaDon.Text = "Tạo Hóa Đơn ";
-            btn_TaoHoaDon.UseVisualStyleBackColor = true;
-            btn_TaoHoaDon.Click += btn_TaoHoaDon_Click;
-            // 
             // quanlyxe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 794);
-            Controls.Add(btn_TaoHoaDon);
+            ClientSize = new Size(1108, 580);
             Controls.Add(btnexit);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -291,6 +279,5 @@
         private ColumnHeader CNgayVao;
         private ColumnHeader CNgayRa;
         private Button btnexit;
-        private Button btn_TaoHoaDon;
     }
 }

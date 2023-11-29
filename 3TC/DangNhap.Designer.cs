@@ -32,7 +32,7 @@
             lblmatkhau = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btndangnhap = new Button();
             SuspendLayout();
             // 
             // lbltaikhoan
@@ -71,16 +71,16 @@
             label2.TabIndex = 3;
             label2.Text = "Mật Khẩu:";
             // 
-            // button1
+            // btndangnhap
             // 
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(100, 226);
-            button1.Name = "button1";
-            button1.Size = new Size(191, 54);
-            button1.TabIndex = 4;
-            button1.Text = "ĐĂNG NHẬP";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btndangnhap.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btndangnhap.Location = new Point(100, 226);
+            btndangnhap.Name = "btndangnhap";
+            btndangnhap.Size = new Size(191, 54);
+            btndangnhap.TabIndex = 4;
+            btndangnhap.Text = "ĐĂNG NHẬP";
+            btndangnhap.UseVisualStyleBackColor = true;
+            btndangnhap.Click += button1_Click;
             // 
             // DangNhap
             // 
@@ -88,7 +88,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(394, 481);
-            Controls.Add(button1);
+            Controls.Add(btndangnhap);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblmatkhau);
@@ -97,6 +97,7 @@
             Text = "DangNhap";
             FormClosing += Dangnhao;
             Load += DangNhap_Load;
+            KeyDown += DangNhap_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,6 +108,6 @@
         private TextBox lblmatkhau;
         private Label label1;
         private Label label2;
-        private Button button1;
+        private Button btndangnhap;
     }
 }

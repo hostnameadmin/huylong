@@ -62,9 +62,18 @@ namespace _3TC
             Application.Exit();
         }
 
+        private void DangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
+
         private void DangNhap_Load(object sender, EventArgs e)
         {
-
+            this.KeyPreview = true;
+            this.KeyDown += DangNhap_KeyDown;
         }
     }
 }
