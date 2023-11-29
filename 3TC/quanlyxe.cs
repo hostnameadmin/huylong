@@ -128,46 +128,13 @@ namespace _3TC
 
         private void quanlyxe_Load(object sender, EventArgs e)
         {
-            ListViewItem lbx = new ListViewItem("");
-            lbx.SubItems.Add("Huy Long");
-            lbx.SubItems.Add("1234");
-            lbx.SubItems.Add("BMW");
-            lbx.SubItems.Add("19/11/2023");
 
-            lstbaixe.Items.Add(lbx);
-
-            ListViewItem qlbx = new ListViewItem("");
-            qlbx.SubItems.Add("Mai Trọng");
-            qlbx.SubItems.Add("2345");
-            qlbx.SubItems.Add("Ford");
-            qlbx.SubItems.Add("19/11/2023");
-
-            lstbaixe.Items.Add(qlbx);
-
-            ListViewItem baixe = new ListViewItem("");
-            baixe.SubItems.Add("Trần Vĩ");
-            baixe.SubItems.Add("34567");
-            baixe.SubItems.Add("Honda");
-            baixe.SubItems.Add("19/11/2023");
-
-            lstbaixe.Items.Add(baixe);
-            lstbaixe.FullRowSelect = true;
-            lstbaixe.View = View.Details;
 
 
         }
         private void lstbaixe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstbaixe.Items.Count > 0)
-            {
-                ListViewItem lvt = lstbaixe.SelectedItems[0];
 
-                string sott = lvt.SubItems[0].Text;
-                string tenkh = lvt.SubItems[1].Text;
-                string bienso = lvt.SubItems[2].Text;
-                string hangxe = lvt.SubItems[3].Text;
-                string ngayvao = lvt.SubItems[4].Text;
-            }
 
         }
 
@@ -175,6 +142,8 @@ namespace _3TC
         {
             var frm = new HoaDon();
             frm.ShowDialog();
+
+            
+         }
         }
     }
-}

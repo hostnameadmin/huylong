@@ -109,17 +109,28 @@ namespace _3TC
                 item.Text = index.ToString();
                 index++;
             }
-            DateTime startDate = dateTimePicker1.Value;
+  
             DateTime endDate = dateTimePicker2.Value;
 
-            // Tính số ngày giữa hai ngày
-            TimeSpan difference = endDate - startDate;
-            int numberOfDays = (int)(endDate - startDate).TotalDays;
-
-            lbl_TongNgayThueXe.Text = $"{numberOfDays}";
+       
         }
 
         private void lbl_ThanhTien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Box1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

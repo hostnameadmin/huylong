@@ -75,7 +75,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(146, 293);
+            button1.Location = new Point(172, 365);
             button1.Name = "button1";
             button1.Size = new Size(121, 59);
             button1.TabIndex = 10;
@@ -240,9 +240,9 @@
             // 
             // btn_TaoHoaDon
             // 
-            btn_TaoHoaDon.Location = new Point(149, 617);
+            btn_TaoHoaDon.Location = new Point(171, 594);
             btn_TaoHoaDon.Name = "btn_TaoHoaDon";
-            btn_TaoHoaDon.Size = new Size(110, 75);
+            btn_TaoHoaDon.Size = new Size(183, 75);
             btn_TaoHoaDon.TabIndex = 12;
             btn_TaoHoaDon.Text = "Tạo Hóa Đơn ";
             btn_TaoHoaDon.UseVisualStyleBackColor = true;
