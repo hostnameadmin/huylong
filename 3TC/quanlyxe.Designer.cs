@@ -49,6 +49,7 @@
             CNgayVao = new ColumnHeader();
             CNgayRa = new ColumnHeader();
             btnexit = new Button();
+            btn_TaoHoaDon = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -237,11 +238,22 @@
             btnexit.UseVisualStyleBackColor = true;
             btnexit.Click += btnexit_Click;
             // 
+            // btn_TaoHoaDon
+            // 
+            btn_TaoHoaDon.Location = new Point(149, 617);
+            btn_TaoHoaDon.Name = "btn_TaoHoaDon";
+            btn_TaoHoaDon.Size = new Size(110, 75);
+            btn_TaoHoaDon.TabIndex = 12;
+            btn_TaoHoaDon.Text = "Tạo Hóa Đơn ";
+            btn_TaoHoaDon.UseVisualStyleBackColor = true;
+            btn_TaoHoaDon.Click += btn_TaoHoaDon_Click;
+            // 
             // quanlyxe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1141, 794);
+            Controls.Add(btn_TaoHoaDon);
             Controls.Add(btnexit);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -279,5 +291,6 @@
         private ColumnHeader CNgayVao;
         private ColumnHeader CNgayRa;
         private Button btnexit;
+        private Button btn_TaoHoaDon;
     }
 }
