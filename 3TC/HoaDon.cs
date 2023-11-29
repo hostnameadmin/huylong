@@ -109,10 +109,10 @@ namespace _3TC
                 item.Text = index.ToString();
                 index++;
             }
-  
+
             DateTime endDate = dateTimePicker2.Value;
 
-       
+
         }
 
         private void lbl_ThanhTien_Click(object sender, EventArgs e)

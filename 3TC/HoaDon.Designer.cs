@@ -44,6 +44,7 @@
             groupBox1 = new GroupBox();
             listHoaDon = new ListView();
             MaHoaDon = new ColumnHeader();
+            tennhanvien = new ColumnHeader();
             cKhachHang = new ColumnHeader();
             cBienSoXe = new ColumnHeader();
             cHangXe = new ColumnHeader();
@@ -65,7 +66,6 @@
             button4 = new Button();
             button5 = new Button();
             btn_CapNhap = new Button();
-            tennhanvien = new ColumnHeader();
             Box1.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -249,6 +249,11 @@
             MaHoaDon.Text = "Mã Hóa Đơn";
             MaHoaDon.Width = 100;
             // 
+            // tennhanvien
+            // 
+            tennhanvien.Text = "Nhân VIên";
+            tennhanvien.Width = 90;
+            // 
             // cKhachHang
             // 
             cKhachHang.Text = "Tên Khách Hàng";
@@ -423,7 +428,7 @@
             // 
             button5.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.Red;
-            button5.Location = new Point(1131, 40);
+            button5.Location = new Point(1029, 112);
             button5.Name = "button5";
             button5.Size = new Size(97, 64);
             button5.TabIndex = 7;
@@ -442,11 +447,6 @@
             btn_CapNhap.Text = "Cập Nhập";
             btn_CapNhap.UseVisualStyleBackColor = true;
             btn_CapNhap.Click += btn_CapNhap_Click;
-            // 
-            // tennhanvien
-            // 
-            tennhanvien.Text = "Nhân VIên";
-            tennhanvien.Width = 90;
             // 
             // HoaDon
             // 
